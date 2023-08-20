@@ -14,4 +14,4 @@ end
 
 local ping, pingString = tonumber(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString():match("%d+"))
 writefile("prediction_values.txt", generatePredictionsFromPing(ping))
-warn("Prediction values saved.")
+warn("Prediction values saved to your executor's folder. (Try checking your Workspace folder for prediction_values.txt or whatever your file name is.)")
