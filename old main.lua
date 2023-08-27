@@ -5,7 +5,7 @@ local function generatePredictionsFromPing(ping)
                         {90, 100}, {100, 110}, {110, 120}, {120, 130}, {130, 140}, {140, 150},
                         {150, 160}, {160, 170}, {170, 180}, {180, 190}, {190, 200}, {200, 210},
                         {210, 220}}
-    local w = "-- made by bolt / fiji / www.doxbin.com on discord\n\n"
+    local w = "-- made by bolt / fiji / fiji.png on discord\n\n"
     local p = {}
     for _, r in ipairs(pingRanges) do
         table.insert(p, string.format("ping%d_%d = %.4f,", r[1], r[2], math.random() * 0.1 + 0.1))
