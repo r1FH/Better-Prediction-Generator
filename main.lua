@@ -8,7 +8,7 @@ local function generatePredictionsFromPing(ping)
         local precision = (pingMin - basePing) / 1000
         predictions = predictions .. string.format("ping%d_%d = %.4f,\n", pingMin, pingMin + 10, math.random() * precision + 0.1)
     end
-    return string.format("-- made by bolt / fiji / www.doxbin.com on discord\n-- Ping used: %dms\n-- Created at: %s\n-- T-String: %s\n\n%s",
+    return string.format("-- made by bolt / fiji / fiji.png on discord\n-- Ping used: %dms\n-- Created at: %s\n-- T-String: %s\n\n%s",
         ping, os.date("%Y-%m-%d %H:%M:%S"), generateRandomString(10), predictions:sub(1, -2))
 end
 
