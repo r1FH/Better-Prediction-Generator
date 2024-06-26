@@ -1,6 +1,6 @@
 -- this is the old version, really buggy so dont use.
 
-local function generatePredictionsFromPing(ping)
+function generate(ping)
     local pingRanges = {{20, 30}, {30, 40}, {40, 50}, {50, 60}, {60, 70}, {70, 80}, {80, 90},
                         {90, 100}, {100, 110}, {110, 120}, {120, 130}, {130, 140}, {140, 150},
                         {150, 160}, {160, 170}, {170, 180}, {180, 190}, {190, 200}, {200, 210},
@@ -14,5 +14,5 @@ local function generatePredictionsFromPing(ping)
 end
 
 local pingValue = tonumber(string.split(game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString(), '(')[1])
-writefile("prediction_values.txt", generatePredictionsFromPing(pingValue))
+writefile("prediction_values.txt", generate(pingValue))
 print("Prediction values saved.")
